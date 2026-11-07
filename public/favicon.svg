@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#0B1220"/>
+  <rect x="2" y="2" width="44" height="44" rx="8" stroke="#00D9FF" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- Anvil Base & Forge Block -->
+  <path d="M12 32H36V36C36 36.5523 35.5523 37 35 37H13C12.4477 37 12 36.5523 12 36V32Z" fill="#1F2937"/>
+  <path d="M16 28H32V32H16V28Z" fill="#374151"/>
+  <!-- Stylized Pixel/Hammer/Spark Forge Shape -->
+  <path d="M14 20C14 18.8954 14.8954 18 16 18H30C32.2091 18 34 19.7909 34 22V24C34 25.1046 33.1046 26 32 26H14V20Z" fill="#00D9FF"/>
+  <!-- Glowing pixel sparks -->
+  <rect x="26" y="11" width="5" height="5" rx="1" fill="#FFFFFF"/>
+  <rect x="34" y="14" width="4" height="4" rx="1" fill="#00D9FF"/>
+  <rect x="20" y="12" width="3" height="3" rx="0.75" fill="#00D9FF" fill-opacity="0.7"/>
+</svg>

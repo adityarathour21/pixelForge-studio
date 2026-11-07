@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Replace YOUR_DOMAIN with your production domain before production deployment
+Sitemap: https://YOUR_DOMAIN/sitemap.xml

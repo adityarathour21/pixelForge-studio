@@ -1,0 +1,8 @@
+{
+  "name": "PixelForge Studio",
+  "description": "Premium web development agency website crafting high-performance, responsive, and growth-driving digital experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
