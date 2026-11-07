@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, ShieldAlert } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
@@ -15,12 +15,12 @@ export function Testimonials() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading with explicit demo notice */}
+        {/* Section Heading with explicit demonstration notice */}
         <SectionHeading
-          kicker="Client Feedback"
-          title="What Clients Say About"
-          highlight="Our Craft"
-          description="Illustrative feedback and sample reviews representing typical client engagements. Note: Replace with real client endorsements upon launch."
+          kicker="Demonstration Showcase"
+          title="Sample Client"
+          highlight="Feedback Format"
+          description="These entries illustrate how client endorsements are presented. PixelForge Studio does not publish unverified or fictional reviews. Replace these placeholders with your verified client reviews upon launch."
         />
 
         {/* Testimonials Cards Grid */}
@@ -29,10 +29,10 @@ export function Testimonials() {
             <Reveal key={test.id} delay={index * 100}>
               <Card className="p-8 h-full flex flex-col justify-between group border border-white/5 hover:border-[#00D9FF]/40 transition-all duration-300">
                 <div>
-                  {/* Card Top: Sample badge + Stars */}
+                  {/* Card Top: Explicit Demo Content badge + Stars */}
                   <div className="flex items-center justify-between gap-2 mb-6">
-                    <Badge variant="sample" size="xs">
-                      Sample Testimonial
+                    <Badge variant="sample" size="xs" icon={ShieldAlert}>
+                      Demo Content
                     </Badge>
                     <div className="flex items-center gap-1 text-[#00D9FF]">
                       {[...Array(test.rating)].map((_, i) => (

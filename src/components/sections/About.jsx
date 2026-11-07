@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Lightbulb, Award, Zap, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Code2, Palette, Zap, HeartHandshake, ShieldCheck } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
@@ -53,23 +53,23 @@ export function About() {
 
   const pillars = [
     {
-      title: "Innovation",
-      description: "We adopt contemporary web standards and tools (React 19, modern CSS, micro-interactions) to keep your brand ahead of industry curves.",
-      icon: Lightbulb,
+      title: "Technical Excellence",
+      description: "We engineer standards-compliant, modular React and semantic CSS architectures that load rapidly and scale effortlessly without technical debt.",
+      icon: Code2,
     },
     {
-      title: "Quality",
-      description: "From semantic HTML markup to strict TypeScript architecture, we enforce meticulous craftsmanship in every component we deliver.",
-      icon: Award,
+      title: "Human-Centered Design",
+      description: "Interfaces crafted with intentional typography, WCAG AA accessibility, and disciplined visual hierarchy that users instinctively trust.",
+      icon: Palette,
     },
     {
-      title: "Performance",
-      description: "Speed is not an afterthought. We optimize asset delivery, minimize re-renders, and target 95+ Core Web Vitals on every viewport.",
+      title: "Performance First",
+      description: "Speed is a core design criterion. We optimize asset delivery, avoid third-party bloat, and target 95+ Core Web Vitals on every screen size.",
       icon: Zap,
     },
     {
-      title: "Client Satisfaction",
-      description: "We work with open channels, milestone previews, and transparent pricing—forging long-term partnerships, not just single transactions.",
+      title: "Transparent Partnership",
+      description: "Honest scopes, milestone-based communication, clear revision cycles, and direct access to senior engineers without agency bureaucracy.",
       icon: HeartHandshake,
     },
   ];
@@ -82,12 +82,12 @@ export function About() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
+        {/* Section Heading - Honest, modern digital web development studio */}
         <SectionHeading
           kicker="About PixelForge Studio"
-          title="Engineered for Clarity,"
-          highlight="Forged for Scale."
-          description="We are an independent digital agency specializing in modern web design and bespoke web development. We help ambitious businesses establish authoritative, conversion-driven digital flagships."
+          title="A Modern Digital"
+          highlight="Web Development Studio"
+          description="PixelForge Studio is a modern digital web development studio. We build bespoke, high-performance websites and React applications with intentional typography, accessible interactions, and clean code tailored to help businesses establish strong, trustworthy digital foundations."
         />
 
         {/* Four Value Pillars Grid */}
@@ -110,7 +110,7 @@ export function About() {
                   </div>
                   <div className="pt-4 mt-4 border-t border-white/5 flex items-center gap-1.5 text-xs text-[#00D9FF] font-mono">
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    <span>Guaranteed Principle</span>
+                    <span>Core Studio Standard</span>
                   </div>
                 </Card>
               </Reveal>
@@ -118,39 +118,41 @@ export function About() {
           })}
         </div>
 
-        {/* Agency Statistics Banner with Visible Sample Badge */}
-        <div
-          ref={statsRef}
-          className="relative rounded-2xl bg-[#111827] border border-white/10 p-8 sm:p-10 overflow-hidden shadow-2xl"
-        >
-          {/* Subtle Top Glowing Line */}
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D9FF] to-transparent opacity-60" />
+        {/* Agency Statistics Banner - Honest & Clearly Badged as Demo Placeholders */}
+        {siteConfig.stats.showStats && (
+          <div
+            ref={statsRef}
+            className="relative rounded-2xl bg-[#111827] border border-white/10 p-8 sm:p-10 overflow-hidden shadow-2xl"
+          >
+            {/* Subtle Top Glowing Line */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D9FF] to-transparent opacity-60" />
 
-          {/* Sample Stats Transparency Notice Banner */}
-          {siteConfig.stats.isPlaceholder && (
-            <div className="flex items-center justify-center mb-8">
-              <Badge variant="sample" size="sm">
-                {siteConfig.stats.noticeText}
-              </Badge>
-            </div>
-          )}
-
-          {/* Counters Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
-            {siteConfig.stats.items.map((stat, i) => (
-              <div key={stat.id} className={`${i > 1 ? 'pt-6 lg:pt-0' : ''} px-4 flex flex-col items-center justify-center`}>
-                <StatCounter
-                  targetValue={stat.value}
-                  suffix={stat.suffix}
-                  inView={isStatsInView}
-                />
-                <p className="mt-2 text-xs sm:text-sm font-medium text-slate-400 font-['Inter']">
-                  {stat.label}
-                </p>
+            {/* Demo Placeholders Transparency Notice Banner */}
+            {siteConfig.stats.isPlaceholder && (
+              <div className="flex items-center justify-center mb-8">
+                <Badge variant="sample" size="sm">
+                  {siteConfig.stats.noticeText}
+                </Badge>
               </div>
-            ))}
+            )}
+
+            {/* Counters Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+              {siteConfig.stats.items.map((stat, i) => (
+                <div key={stat.id} className={`${i > 1 ? 'pt-6 lg:pt-0' : ''} px-4 flex flex-col items-center justify-center`}>
+                  <StatCounter
+                    targetValue={stat.value}
+                    suffix={stat.suffix}
+                    inView={isStatsInView}
+                  />
+                  <p className="mt-2 text-xs sm:text-sm font-medium text-slate-400 font-['Inter']">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
       </div>
     </section>

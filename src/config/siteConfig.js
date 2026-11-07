@@ -2,11 +2,11 @@
  * PixelForge Studio — Site Configuration
  * 
  * This is the SINGLE SOURCE OF TRUTH for:
- * - Brand details & copy
+ * - Brand details & agency copy
  * - Contact information (email, WhatsApp)
  * - Social media links
- * - Sample statistics
- * - Pricing tiers and currency
+ * - Sample statistics and display flags
+ * - Pricing plans (Launch, Growth, Enterprise)
  * - Form submission endpoint (Formspree, Web3Forms, etc.)
  * 
  * Customize this file to personalize your agency website.
@@ -18,16 +18,16 @@ export const siteConfig = {
     name: "PixelForge Studio",
     tagline: "We Forge Digital Experiences.",
     taglineSubtitle: "We Build Digital Experiences That Drive Growth.",
-    description: "PixelForge Studio is a modern web development agency crafting high-performance, responsive, and SEO-optimized digital solutions for forward-thinking businesses.",
-    foundedYear: 2021,
+    description: "PixelForge Studio is a modern digital web development studio crafting high-performance, responsive, and SEO-optimized digital solutions for forward-thinking businesses and founders.",
+    foundedYear: 2024,
   },
 
   // Contact details
-  // Leave empty ("") to show polite placeholders/tooltips prompting configuration.
-  // Add your real details when ready to launch!
+  // Keep empty ("") by default so no fictional contact info is displayed.
+  // Add your verified agency details when ready to launch!
   contact: {
     email: "", // e.g. "hello@pixelforgestudio.com"
-    whatsappNumber: "", // e.g. "919876543210" (country code + number, no '+' or dashes)
+    whatsappNumber: "", // e.g. "919876543210" (country code + number, no '+' or spaces)
     whatsappMessage: "Hi PixelForge Studio, I would like to discuss a web development project.",
     location: "Global Remote Agency",
   },
@@ -41,89 +41,94 @@ export const siteConfig = {
     instagram: "", // e.g. "https://instagram.com/pixelforgestudio"
   },
 
-  // Key Agency Statistics (Animated count-up in the About section)
-  // Visible "Sample statistics" badge is shown to ensure full transparency.
+  // Agency Statistics
+  // Honest transparency: mark as demo placeholders until verified metrics are available.
   stats: {
-    isPlaceholder: true,
-    noticeText: "Sample statistics: replace with real numbers",
+    showStats: true, // Toggle to false to completely hide this block
+    isPlaceholder: true, // Explicitly shows the demo placeholder badge
+    noticeText: "Demo Placeholders: Replace with verified agency metrics upon launch",
     items: [
-      { id: "projects", label: "Projects Completed", value: 48, suffix: "+" },
-      { id: "clients", label: "Happy Clients", value: 36, suffix: "+" },
-      { id: "years", label: "Years of Experience", value: 4, suffix: "+" },
-      { id: "satisfaction", label: "Client Satisfaction", value: 99, suffix: "%" },
+      { id: "projects", label: "Completed Projects (Demo)", value: 48, suffix: "+" },
+      { id: "clients", label: "Client Engagements (Demo)", value: 36, suffix: "+" },
+      { id: "benchmark", label: "Code Quality Benchmark", value: 99, suffix: "%" },
+      { id: "vitals", label: "Lighthouse Vitals Target", value: 98, suffix: "+" },
     ],
   },
 
-  // Pricing Plans (Displayed in Pricing section & connected to Contact form)
+  // Pricing Plans (Launch, Growth, Enterprise)
   pricing: {
     currencySymbol: "₹",
-    disclaimer: "Prices are starting prices and may vary by scope and custom features.",
+    disclaimer: "Prices are starting rates and may vary based on project scope, custom integrations, and specific feature sets.",
     plans: [
       {
-        id: "starter",
-        name: "Starter Website",
-        price: "3,999",
+        id: "launch",
+        name: "Launch Plan",
+        price: "3,999+",
         isNumericPrice: true,
-        period: "starting at",
-        description: "Ideal for small businesses, personal brands, and high-conversion landing pages.",
+        numericValue: "3,999",
+        priceSuffix: "+",
+        period: "starting rate",
+        target: "Individuals, startups and small businesses.",
+        description: "Ideal for launching a clean, modern digital presence with fast loading times and essential conversions.",
         highlighted: false,
         recommended: false,
         serviceSelectValue: "Website Development",
         features: [
-          "Single to 3-Page Responsive Website",
-          "Mobile-First, Modern UI Design",
-          "Contact Form with Email Routing",
-          "Basic SEO Setup & Meta Tags",
-          "Fast Loading Speeds (<2s)",
-          "1 Round of Design Revisions",
-          "2 Weeks of Post-Launch Support",
+          "1–3 responsive website pages",
+          "Modern UI design",
+          "Contact form",
+          "Basic SEO setup",
+          "Mobile optimization",
+          "1 revision round",
         ],
-        ctaText: "Choose Starter Plan",
+        ctaText: "Get Started",
       },
       {
-        id: "business",
-        name: "Business Website",
-        price: "7,999",
+        id: "growth",
+        name: "Growth Plan",
+        price: "7,999+",
         isNumericPrice: true,
-        period: "starting at",
-        description: "Best for growing companies that need multi-page authority and lead generation.",
+        numericValue: "7,999",
+        priceSuffix: "+",
+        period: "starting rate",
+        target: "Growing businesses and professional brands.",
+        description: "Comprehensive solution for established brands demanding high-performance frontend architecture.",
         highlighted: true,
         recommended: true,
-        badgeText: "Recommended",
+        badgeText: "Most Popular",
         serviceSelectValue: "React.js Development",
         features: [
-          "Up to 8 Custom Responsive Pages",
-          "Interactive React.js UI Components",
-          "Advanced SEO Structure & Schema",
-          "Custom Animations & Micro-interactions",
-          "CMS Integration / Blog Ready",
-          "Speed Optimization & 95+ Lighthouse",
-          "3 Rounds of Design Revisions",
-          "30 Days of Dedicated Support",
+          "Up to 8 responsive pages",
+          "Custom React components",
+          "Advanced UI/UX design",
+          "SEO-friendly structure",
+          "Speed optimization",
+          "3 revision rounds",
+          "30 days support",
         ],
-        ctaText: "Choose Business Plan",
+        ctaText: "Choose Growth",
       },
       {
-        id: "custom",
-        name: "Custom Website",
-        price: "Contact for pricing",
+        id: "enterprise",
+        name: "Enterprise Plan",
+        price: "Custom Quote",
         isNumericPrice: false,
-        period: "bespoke scope",
-        description: "For web apps, e-commerce stores, custom portals, and complex architectures.",
+        period: "tailored scope",
+        target: "Businesses requiring advanced websites and custom solutions.",
+        description: "Bespoke engineering for high-traffic web applications, custom databases, and e-commerce platforms.",
         highlighted: false,
         recommended: false,
         serviceSelectValue: "E-commerce Websites",
         features: [
-          "Fully Custom Architecture & Web App",
-          "E-Commerce / Payment Gateway Integration",
-          "API Integrations & Database Storage",
-          "Tailored Design System & Brand Identity",
-          "Role-Based Access / Authentication",
-          "Automated Deployment Pipeline",
-          "Unlimited Architecture Iterations",
-          "90 Days of Priority Support & SLA",
+          "E-commerce website development",
+          "Custom web applications",
+          "Backend and database integration",
+          "Payment gateway integration",
+          "API integrations",
+          "Custom functionality",
+          "Support as per agreement",
         ],
-        ctaText: "Inquire for Custom Quote",
+        ctaText: "Contact Us",
       },
     ],
   },
@@ -133,6 +138,6 @@ export const siteConfig = {
   // - Formspree: "https://formspree.io/f/YOUR_FORM_ID"
   // - Web3Forms: "https://api.web3forms.com/submit"
   // - Any custom JSON REST endpoint expecting POST
-  // If left empty (""), the form operates in a safe Demo Mode!
+  // If left empty (""), the form clearly indicates that configuration is needed.
   formEndpoint: "",
 };

@@ -147,33 +147,39 @@ export const siteConfig = {
 *Note: Any contact channel or social handle left as `""` will either display an informative configuration tooltip or be omitted cleanly from the footer.*
 
 ### 2. Updating Statistics (`src/config/siteConfig.js`)
-Update the counter numbers and remove the placeholder badge:
+Update the counter numbers or hide them completely using `showStats`:
 ```javascript
 stats: {
-  isPlaceholder: false, // Set to false when you have real agency metrics!
-  noticeText: "Sample statistics: replace with real numbers",
+  showStats: true,      // Set to false to hide the statistics block completely
+  isPlaceholder: false, // Set to false when you have verified agency metrics!
+  noticeText: "Demo Placeholders: Replace with verified agency metrics upon launch",
   items: [
-    { id: "projects", label: "Projects Completed", value: 120, suffix: "+" },
-    { id: "clients", label: "Happy Clients", value: 85, suffix: "+" },
-    { id: "years", label: "Years of Experience", value: 6, suffix: "+" },
-    { id: "satisfaction", label: "Client Satisfaction", value: 99, suffix: "%" },
+    { id: "projects", label: "Completed Projects", value: 120, suffix: "+" },
+    { id: "clients", label: "Client Engagements", value: 85, suffix: "+" },
+    { id: "benchmark", label: "Code Quality Benchmark", value: 99, suffix: "%" },
+    { id: "vitals", label: "Lighthouse Vitals Target", value: 98, suffix: "+" },
   ],
 }
 ```
 
 ### 3. Updating Pricing Plans (`src/config/siteConfig.js`)
-You can change the currency symbol (`₹`, `$`, `€`, `£`), prices, and feature checklists directly in `siteConfig.pricing`.
+The plans are pre-configured with three professional tiers:
+- **Launch Plan** (₹3,999+): For individuals, startups and small businesses (1–3 responsive pages, modern UI, contact form, basic SEO, mobile optimization, 1 revision).
+- **Growth Plan** (₹7,999+): Highlighting the "Most Popular" badge (Up to 8 pages, custom React components, advanced UI/UX, SEO structure, speed optimization, 3 revisions, 30 days support).
+- **Enterprise Plan** (Custom Quote): For advanced websites (E-commerce, web applications, backend/DB, payments, APIs, custom functionality, SLA support).
+
+You can modify prices, currency symbol (`₹`, `$`, `€`, `£`), and deliverables directly in `siteConfig.pricing.plans`.
 
 ### 4. Replacing Demo Projects with Real Work (`src/data/projects.js`)
 Edit `src/data/projects.js`:
 - Update `title`, `shortDescription`, `problemSolved`, and `keyFeatures`.
 - Set `liveUrl` to your client's live production URL (e.g. `https://client.com`). When provided, the modal renders a secure "Live Preview" button with `rel="noopener noreferrer"`.
-- If you have actual screenshots, you can place image files in `public/projects/` and replace `<ProjectThumbnail />` in `src/components/sections/Portfolio.jsx` with an `<img>` tag with `loading="lazy"`.
+- All demo concepts currently carry explicit "Demo Concept" badges.
 
 ### 5. Replacing Sample Testimonials (`src/data/testimonials.js`)
 Edit `src/data/testimonials.js`:
-- Replace sample names with real client names, companies, and verbatim quotes.
-- In `src/components/sections/Testimonials.jsx`, remove the `<Badge variant="sample">` once real reviews are published.
+- Replace sample names and demo concepts with verified client testimonials.
+- PixelForge Studio does not display fictional reviews as genuine endorsements; all sample reviews carry explicit "Demo Content" badges until verified reviews are substituted.
 
 ---
 
